@@ -101,10 +101,9 @@
 	alert(string1[0].toUpperCase() + string1.substring(1))
 	alert(string2[0].toUpperCase() + string2.substring(1))
 	alert(string3[0].toUpperCase() + string3.substring(1))
-</script>
 
-<script type="text/javascript">
-	 
+// Почему код даёт именно такие результаты?
+	alert("Упражнение с инкрементом");
 	var a = 1, b = 1, c, d;
 
 	c = ++a; alert(c);
@@ -134,27 +133,199 @@
 	alert(b);               // 3
 
 //Чему будет равен x в примере ниже? 
+	alert("Упражнение с оператором присвоения в арифметическом выражении");
  
-var a = 2;
-var x = 1 + (a *= 2);
-// перед сложением в а заносится значение этой переменной умноженное на 2
-// a = a * 2 и затем в x заноситсярезультат сложения a c 1
-alert(a);
-alert(x);
+	var a = 2;
+	var x = 1 + (a *= 2);
+	// перед сложением в а заносится значение этой переменной умноженное на 2
+	// a = a * 2 и затем в x заноситсярезультат сложения a c 1
+	// x = 5
+	alert(a);
+	alert(x);
 
-var a,b;
-a = prompt("Введите первое число");
-b = prompt("Введите второе число");
-if (a * b < 0)
-	alert(a + b);
-else {
-	if (a > 0)
-		alert (a - b);
-	else
-		alert(a * b);
+/*
+		Объявить две целочисленные переменные a и b и задать им произвольные
+		начальные значения. 
+		Затем написать скрипт, который работает по следующему принципу:
+		если a и b положительные, вывести их разность;
+		если а и b отрицательные, вывести их произведение;
+		если а и b разных знаков, вывести их сумму;
+        ноль можно считать положительным числом
+*/
+	alert("упражнение с условным оператором");
+	var a,b;
+	a = parseInt(prompt("Введите первое число"));
+	b = parseInt(prompt("Введите второе число"));
+	if (a * b < 0)
+		alert("Введенные числа разных знаков, выводим сумму " + (a + b));
+	else {
+		if (a > 0)
+			alert ("Введенные числа положительные, выводим разность " + (a - b));
+		else
+			alert("Введенные числа отрицательные, выводим произведение " + (a * b));
+	}
+
+/*
+Присвоить переменной а значение в промежутке [0..15]. С помощью оператора 
+switch организовать вывод чисел от a до 15.
+*/
+	var number = parseInt(prompt("Введите число от 0 до 15\n"));
+	alert("Числа от " + number + " до 0 выводятся в консоль");
+	switch(number){
+		case 15:
+		console.log(number-- + " ");
+		case 14:
+		console.log(number-- + " ");
+		case 13:
+		console.log(number-- + " ");
+		case 12:
+		console.log(number-- + " ");
+		case 11:
+		console.log(number-- + " ");
+		case 10:
+		console.log(number-- + " ");
+		case 9:
+		console.log(number-- + " ");
+		case 8:
+		console.log(number-- + " ");
+		case 7:
+		console.log(number-- + " ");
+		case 6:
+		console.log(number-- + " ");
+		case 5:
+		console.log(number-- + " ");
+		case 4:
+		console.log(number-- + " ");
+		case 3:
+		console.log(number-- + " ");
+		case 2:
+		console.log(number-- + " ");
+		case 1:
+		console.log(number-- + " ");
+		case 0:
+		console.log(number-- + "\n");
+		break;
+		default:
+		console.log("Incorrect number\n");
 }
 
-	 
+	alert("5 + 4 = " + add(5, 4));
+
+	alert("5 - 4 = " + minus(5, 4));
+
+	alert("5 * 4 = " + multiplay(5, 4));
+
+	alert("5 / 4 = " + devide(5, 4));
+
+	alert("5 + 4 = " + mathOperation(5, 4, '+'));
+
+	alert("5 - 4 = " + mathOperation(5, 4, '-'));
+
+	alert("5 * 4 = " + mathOperation(5, 4, '*'));
+
+	alert("5 / 4 = " + mathOperation(5, 4, '/'));
+
+// Сравнить null и 0. Попробуйте объяснить результат.
+	alert("null " + null);
+	alert("0 " + 0);
+	alert("Boolean(null) " + Boolean(null));
+	alert("Boolean(0) " + Boolean(0));
+	alert("typeof(null) " + typeof(null));
+	alert("typeof(0) " + typeof(0));
+
+	if (null === 0){  // equal value and equal type
+		alert("условие null === 0 -> true в операторе if");
+	}
+	else
+		alert("условие null === 0 -> false в операторе if");
+
+	if (null == 0){ // equal value
+		alert("условие null == 0 -> true в операторе if");
+	}
+	else
+		alert("условие null == 0 -> false в операторе if");
+
+	if (null && 0){  // equal value and equal type
+		alert("условие null && 0 -> true в операторе if");
+	}
+	else
+		alert("условие null && 0 -> false в операторе if");
+
+	if (null & 0){ // equal value
+		alert("условие null & 0 -> true в операторе if");
+	}
+	else
+		alert("условие null & 0 -> false в операторе if");
+
+	if (Boolean(null) === Boolean(0)){  // equal value and equal type
+		alert("условие Boolean(null) === Boolean(0) -> true в операторе if");
+	}
+	else
+		alert("условие Boolean(null) === Boolean(0) -> false в операторе if");
+
+	if (Boolean(null) == Boolean(0)){ // equal value
+		alert("условие Boolean(null) == Boolean(0) -> true в операторе if");
+	}
+	else
+		alert("условие Boolean(null) == Boolean(0) -> false в операторе if");
+// С помощью рекурсии организовать функцию возведения числа в степень.
+// Формат: function power(val, pow), где val – заданное число, pow – степень.
+	var num = parseInt(prompt("Введите число возводимое в степень."));
+	var pow = parseInt(prompt("Введите показатель степени - целое положительное число."));
+	var errorMessage = "Показатель степени - целое положительное число.";
+
+	isInteger(pow) ? alert(power(num, pow)) : alert(errorMessage);	
+
+	function add(a, b){
+		return a + b;
+	}
+	function minus(a, b){
+		return a - b;
+	}
+	function multiplay(a, b){
+		return a * b;
+	}
+	function devide(a, b){
+		return a / b;
+	}
+
+	function mathOperation(a, b, operation){
+		var result;
+		switch(operation){
+			case "+":
+			result = add(a, b);
+			break;
+			case "-":
+			result = minus(a, b);
+			break;
+			case "*":
+			result = multiplay(a, b);
+			break;
+			case "/":
+			result = devide(a, b);
+			break;
+			default:
+		}
+		return result;
+	}
+
+	function power(val, pow){
+		if (pow > 0){
+			return  val * power(val, --pow);
+		}
+		else return 1;
+	}
+
+	/*
+	^  0 1
+
+	0  0 1
+	1  1 0
+	*/
+	function isInteger(num) {
+	  return (num ^ 0) === num;
+	}
+
 </script>
 </body>
 </html>
