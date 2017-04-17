@@ -1,47 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lesson 01</title>
+	<title>Lesson 02</title>
 	<meta charset="utf-8">
 </head>
 <body>
-/*
-Найдите оширавьте его.
+
 <script>
-2sad = 'This is Sparta!!!'
-result = "true"; //Значение есть результат или нет. Если есть true, если значения нет false
-var %entage = 20;
-var header = "Заголовок новой статьи';
-zip code = 983456
-Prompt('Введите хоть что-нибудь')
-Alert 'Вы точно все ввели?'
-var var1 = 25;
-var var2 = 'Орехов';
-alert (Вы нашли var1 var2)
-var var3 = '45';
-var var4 = 20;
-console.log (var3+var4) // Этот результат проверить. Должно получиться 65.
+    "use strict"
+	//Найдите ошибки в коде и исправьте его.
+	/* 
+	  Отсутствует ключевое слово "var". Корректно, если надо сделать переменную глобальной.
+	  Начинаться имя переменной должно с буквы, подчеркивания или $.
+	  Отсутствует точка с запятой.
+	*/
+	var sad = 'This is Sparta!!!';
+
+	// В исходном варианте не пустая строка-все время возвращалось бы при проверках true.
+	// Если нет планов сделать переменную глобальной, то надо добавить  ключевое слово "var" 
+	var result = true; //Значение есть результат или нет. Если есть true, если значения нет false
+
+	//имя переменной должно начинаться с буквы, подчеркивания, знака $, изменил на больее осмысленное имя.
+	var percentage = 20;
+
+	// Инициализировать наверное лучше пустой строкой.
+	// Должны быть либо только одинарные , либо только двойные кавычки.
+	var header = '';
+
+	// Если не должна быть глобальной, то добавить  ключевое слово "var"
+	// Точку с запятой надо добавить
+	var zipCode = 983456;
+
+	// Введенное пользователем значение нигде не сохраняется
+	// Имя функции было неправильное - начиналось с большой буквы
+	var input = prompt('Введите хоть что-нибудь');
+
+	// Сообщение малоинформативное
+	// Имя функции было неправильное - начиналось с большой буквы
+	alert ('Вы точно все ввели?');
+
+	// Имена переменным лучше делать более осмысленными
+	var itemCount = 25;
+	var item = 'Орехов';
+	alert ("Вы нашли " + " " + itemCount + " " + item);
+
+	// Получится строка "4520" т.к. имеет место конкатенация строк
+	var var3 = '45';
+	var var4 = 20;
+	console.log (var3+var4); // Этот результат проверить. Должно получиться 65.
 </script>
-Определите типы следующих переменных:
-var art = “25 / 5”;
-var same = null;
-var scoop;
-var flag = 0;
-var plat = true;
-var devid = 34 / 7;
-var person = {lastname: Ivan}
-var fruits = ['apple'];
-var iceCream = function() { alert('Я люблю мороженое'); }
-Найдите длину следующих строк:
-“JavaScript is a high-level, dynamic, untyped, and interpreted programming language”.
-“Netscape Communications realized that the Web needed to become more dynamic”.
-“JavaScript was realized in ten days”.
-Выведите следующие строки в верхнем регистре. Результат присвойте переменной.
-“console.log”;
-‘Hello World!’;
-‘I need more code on JavaScript’;
-Переменные из предыдущего задания преобразуйте в нижний регистр.
-Преобразуйте в верхний регистр, только первые буквы.*/
+
+<code>
+	Определите типы следующих переменных:<br>
+	var art = "25 / 5"; // string если кавычки поставить правильные<br>
+	var same = null; // object<br>
+	var scoop; // object<br>
+	var flag = 0; // number<br>
+	var plat = true; // boolean<br>
+	var devid = 34 / 7; // number<br>
+	var person = {lastname: 'Ivan'}; // object<br>
+	var fruits = ['apple']; // object<br>
+
+	// Выражение короткое, фигурные скобки излишни<br>
+	var iceCream = function() alert('Я люблю мороженое'); // function<br>
+
+	var iceCream = function() {<br>
+	  alert('Я люблю мороженое');<br>
+	} // function<br>
+</code>
+
+<script>
+    "use strict"
+	// Найдите длину следующих строк:
+	var strTmp = "JavaScript is a high-level, dynamic, untyped, and interpreted programming language";
+	alert("Длина строки \"" + strTmp + "\" : " + strTmp.length);
+	strTmp = "Netscape Communications realized that the Web needed to become more dynamic";
+	alert("Длина строки \"" + strTmp + "\" : " + strTmp.length);
+	strTmp = "JavaScript was realized in ten days";
+	alert("Длина строки \"" + strTmp + "\" : " + strTmp.length);
+
+	// Выведите следующие строки в верхнем регистре. Результат присвойте переменной.
+	var string1 = "console.log".toUpperCase();
+	var string2 = "Hello World!".toUpperCase();
+	var string3 = "I need more code on JavaScript".toUpperCase();
+
+	alert(string1);
+	alert(string2);
+	alert(string3);
+
+	// Переменные из предыдущего задания преобразуйте в нижний регистр.
+	string1 = string1.toLowerCase();
+	string2 = string2.toLowerCase();
+	string3 = string3.toLowerCase();
+
+	alert(string1);
+	alert(string2);
+	alert(string3);
+
+	// Преобразуйте в верхний регистр, только первые буквы.
+	alert(string1[0].toUpperCase() + string1.substring(1))
+	alert(string2[0].toUpperCase() + string2.substring(1))
+	alert(string3[0].toUpperCase() + string3.substring(1))
+</script>
+
+
+	 
+</script>
 </body>
 </html>
-
