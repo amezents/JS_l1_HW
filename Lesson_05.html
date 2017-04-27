@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Lesson 05</title>
+	<meta charset="utf-8">
+	<script src="scripts/hw_05.js"></script>
+</head>
+
+<body>
+	<script>
+		console.log( sum( range1(0,4) ) );
+		console.log( sum( range1(0,4,2) ) );
+		console.log( sum( range1(0,4,5) ) );
+		console.log( sum( range1(-4,0) ) );
+		console.log( sum( range1(-4,0,2) ) );
+		console.log( sum( range1(-4,0,5) ) );
+
+
+		console.log( sum( range1(4,0) ) );
+		console.log( sum( range1(4,0,-2) ) );
+		console.log( sum( range1(4,0,-5) ) );
+		console.log( sum( range1(0,-4,-1) ) );
+		console.log( sum( range1(0,-4,-2) ) );
+		console.log( sum( range1(0,-4,-5) ) );
+
+/*
+		console.log( range(0,4) );
+		console.log( range(0,4,2) );
+		console.log( range(0,4,5) );
+		console.log( range(-4,0) );
+		console.log( range(-4,0,2) );
+		console.log( range(-4,0,5) );
+
+
+		console.log( range(4,0) );
+		console.log( range(4,0,-2) );
+		console.log( range(4,0,-5) );
+		console.log( range(0,-4,-1) );
+		console.log( range(0,-4,-2) );
+		console.log( range(0,-4,-5) );
+
+*/
+
+
+/*
+		console.log( sum( range(1,4) ) );
+		*/
+		var list = { value: 1 };
+		list.next = { value: 2 };
+		list.next.next = { value: 3 };
+		list.next.next.next = { value: 4 };
+
+		console.log("printListLoopForward.\n");
+		printListLoopForward(list);	
+
+		console.log("printListLoopBackward.\n");
+		printListLoopBackward(list);	
+
+		console.log("Начало списка.printListRecursiveForward\n");
+		printListRecursiveForward(list);	
+		console.log("Конец списка.\n");
+
+
+		console.log("Начало списка.printListRecursiveBackward\n");
+		printListRecursiveBackward(list);	
+		console.log("Конец списка.\n");
+
+		var item = {
+		 here: {
+		   is: "an"
+		 },
+		 name: 2
+		};
+
+    console.log("\n\nТест 1\n");
+		console.log(deepEqual(item, item));  // true
+    console.log("\n\nТест 2\n");
+		console.log(deepEqual(item, {here: 1, name: 2}));  // false
+    console.log("\n\nТест 3\n");
+		console.log(deepEqual(item, {here: {is: "an"}, name: 2}));   // true
+
+    console.log("\n\nТест 4a\n");
+		console.log(deepEqual(item, null));   // true
+
+    console.log("\n\nТест 4b\n");
+		console.log(deepEqual(null, null));   // true
+
+    console.log("\n\nТест 5\n");
+		console.log(deepEqual(item, "asdf"));   // true
+    console.log("\n\nТест 6\n");
+		console.log(deepEqual(item, 1));   // true
+
+	</script>
+</body>
+
+</html>
